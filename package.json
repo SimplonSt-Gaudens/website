@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SimplonSt-Gaudens/website#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "jquery": "^3.1.1"
   }
 }
