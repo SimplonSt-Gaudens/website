@@ -1,2 +1,1 @@
-# website
-# N'oubliez pas de faire npm intall pour récupérer les dépendances (jquery et bootstrap).
+# Merci de travailler sur la branche "dev", la branche "master" (celle-ci) ne doit pas etre modifiée à ce stagde du projet.
