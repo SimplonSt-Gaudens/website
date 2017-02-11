@@ -69,6 +69,16 @@ div.collapse.navbar-collapse.menu {
     letter-spacing: 2px;
 }
 
+#sidebar {
+    position: absolute;
+    float: left;
+    z-index: 2;
+}
+
+li {
+    list-style: none;
+}
+
 
 /* A conserver en bas de cette page - pour responsive */
 
