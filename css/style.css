@@ -12,6 +12,8 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+/**** header ****/
+
 header {
     background: url("../images/stgaudens2.jpg") no-repeat center center;
     height: 100vh;
@@ -29,6 +31,16 @@ header>h1 {
 
 #logotop {
     height: 70vh;
+}
+
+/**** navbar ****/
+
+.sticky {
+    position:fixed;
+    z-index: 3;
+    right:0;
+    left:0;
+    top:0;
 }
 
 div.navbar.navbar-default {
@@ -68,6 +80,8 @@ div.collapse.navbar-collapse.menu {
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+/**** Social Networks ****/
 
 #sidebar {
     position: absolute;
