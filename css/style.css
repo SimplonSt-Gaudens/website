@@ -93,6 +93,15 @@ li {
     list-style: none;
 }
 
+/**** 3 evements ****/
+
+.actu.container{
+    margin: 2% 6%;
+}
+
+.actu.evenement {
+    background: "#e1242d";
+}
 
 /* A conserver en bas de cette page - pour responsive */
 
