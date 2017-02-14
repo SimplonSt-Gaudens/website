@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Simplon Saint-Gaudens</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />-->
     <link rel="icon" href="images/favicon.ico">
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -119,16 +120,45 @@
             </a>
         </div>
     </section>
-    <section>
+    <section class="api">
         <!-- Patrick/Raphael -->
+        <div class="col-lg-6" id="carte">
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMo2ekPEsFUR_VhUrHockCgOnfO7UoXBk"></script>
+
+
+        </div>
+        <div clas="col-lg-6" id="coord">
+            <h4>adresse:</h4>
+            <p>MJC du Saint-Gaudinnois<br>1, rue de l'Avenir<br>31800 Saint-Gaudens</p><br>
+            <h4>Pour contacter nos formateurs:</h4>
+            <p><strong>Mail: </strong><a href="url:simplon_stgau_formateurs@framalistes.org"> Formateurs Simplon</a><br><br>
+
+                <h4>Pour nous rejoindre :</h4><br>
+                <div id="destinationForm">
+                    <form action="" method="get" name="direction" id="direction">
+                        <label>Point de départ :</label>
+                        <input type="text" name="origin" id="origin">
+                        <label>Destination :</label>
+                        <input type="text" name="destination" id="destination">
+                        <input type="button" value="Calculer l'itinéraire" onclick="javascript:calculate()">
+                    </form>
+
+                </div>
+                <div id="panel"></div>
+
+
+        </div>
+
+
+
     </section>
     <a id="pagebottom"></a>
     <footer>
 
     </footer>
-    <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type='text/javascript' src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src="js/app.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>

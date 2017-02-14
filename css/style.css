@@ -12,6 +12,7 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+
 /**** header ****/
 
 header {
@@ -33,14 +34,15 @@ header>h1 {
     height: 70vh;
 }
 
+
 /**** navbar ****/
 
 .sticky {
-    position:fixed;
-    z-index: 3;
-    right:0;
-    left:0;
-    top:0;
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 div.navbar.navbar-default {
@@ -81,6 +83,7 @@ div.collapse.navbar-collapse.menu {
     letter-spacing: 2px;
 }
 
+
 /**** Social Networks ****/
 
 #sidebar {
@@ -102,6 +105,18 @@ li {
 .actu.evenement {
     background: "#e1242d";
 }
+
+/**** API ****/
+
+#carte {
+    height: 100vh;
+}
+
+#coord {
+    padding-top: 150px;
+    text-align: center;
+}
+
 
 /* A conserver en bas de cette page - pour responsive */
 
