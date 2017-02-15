@@ -102,12 +102,15 @@ div.collapse.navbar-collapse.menu {
 li {
     list-style: none;
 }
+
+
 /*Lesly*/
 
 .competences {
     height: 100vh;
     background-color: pink;
 }
+
 
 /**** Caroussel ****/
 
@@ -117,7 +120,7 @@ li {
 }
 
 .carousel {
-    background-color: #DCDCDC;
+    background-color: transparent;
 }
 
 
@@ -178,7 +181,7 @@ section>.api {
 
 /**** Footer ****/
 
-.footer {
+footer {
     background-color: #E1242D;
     height: 50vh;
     width: 100vw;
