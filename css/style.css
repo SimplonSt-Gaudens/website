@@ -102,7 +102,12 @@ div.collapse.navbar-collapse.menu {
 li {
     list-style: none;
 }
+/*Lesly*/
 
+.competences {
+    height: 100vh;
+    background-color: pink;
+}
 
 /**** Caroussel ****/
 
