@@ -34,7 +34,6 @@ $(document).ready(function() {
         }
     });
 
-
     //Patrick//
     function initialisation() {
         var LatLng = new google.maps.LatLng(43.109178300248146, 0.7265326380729675);
