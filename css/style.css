@@ -104,11 +104,31 @@ li {
 }
 
 
-/*Lesly*/
+/****Lesly ****/
 
-.competences {
-    height: 100vh;
-    background-color: pink;
+.cptces {
+    /*height: 80vh;*/
+    /*background-color: pink;*/
+    /*display: flex;*/
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.competencesSection {
+    height: auto;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*background-color: lime*/
+}
+
+.imageGroup {
+    /*height: 80vh;*/
+    height: auto;
+    background-color: orange;
+    background-image: url("../images/stgaudens2.jpg");
+    background-size: cover;
 }
 
 
@@ -126,40 +146,25 @@ li {
 
 /**** 3 evements ****/
 
-.actu {
-    background-color: white;
+.events {
+    background-color: #E1242D;
+    padding-top: 30px;
 }
 
-.actu.container {
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-.actu>h3 {
-    text-align: center;
-}
-
-.panel-primary {
-    border-color: transparent;
-    border-radius: 0px;
-}
-
-.panel-body {
-    padding: 0px;
-}
-
-.panel-footer {
+.thumbnail {
     background-color: transparent;
-    padding-left: 0px;
-    padding-right: 0px;
+    border: 0px;
 }
 
-.actu.evenement {
-    background: "#e1242d";
+.caption>p,
+.caption>h3 {
+    color: white;
 }
 
-.panel>h5 {
-    margin: 0px;
+.thumbnail>img {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
 }
 
 
@@ -184,7 +189,7 @@ section>.api {
 footer {
     background-color: #E1242D;
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
