@@ -85,7 +85,9 @@ $(document).ready(function() {
                 destination: destination,
                 travelMode: google.maps.DirectionsTravelMode.DRIVING // Type de transport
             }
+            console.log(request);
             var directionsService = new google.maps.DirectionsService(); // Service de calcul d'itinéraire
+            console.log(directionsService);
             directionsService.route(request, function(response, status) { // Envoie de la requête pour calculer le parcours
                 if (status == google.maps.DirectionsStatus.OK) {
                     direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
