@@ -92,7 +92,12 @@ div.collapse.navbar-collapse.menu {
 li {
     list-style: none;
 }
+/*Lesly*/
 
+.competences {
+    height: 100vh;
+    background-color: pink;
+}
 
 /* A conserver en bas de cette page - pour responsive */
 
