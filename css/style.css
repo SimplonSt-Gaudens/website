@@ -18,6 +18,13 @@ body {
 }
 
 
+
+.philoText a, .philoText a:visited, .philoText a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
 /**** header ****/
 
 header {
@@ -55,7 +62,7 @@ div.navbar.navbar-default {
     border-radius: 0px;
     border: none;
     margin: 0;
-    box-shadow: 0px 2px 10px #666666
+    /*box-shadow: 0px 2px 10px #666666*/
 }
 
 div.collapse.navbar-collapse.menu {
@@ -103,32 +110,66 @@ li {
     list-style: none;
 }
 
+/**** philosophie ****/
+
+.philosophie {
+    background-color: #E1242D;
+    z-index: 2;
+    box-shadow: 0px 4px 5px #888888;
+}
+
+.philoText {
+    color: white;
+    text-align: center;
+    width: 80vw;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.philoText > h3 {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 145%;
+}
+
+.philoText > p {
+    text-align: right;
+    font-size: 16px;
+    line-decoration: none;
+}
+
+
+
 /****Lesly ****/
 
 
 .cptces {
-    /*height: 80vh;*/
-    /*background-color: pink;*/
-    /*display: flex;*/
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.text {
+    /*padding-right: 40px;*/
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /*padding-left: 8%;*/
+    /*padding-right: 8%;*/
 }
 
 
 .competencesSection {
     height: auto;
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    /*background-color: lime*/
+    /*padding-top: 60px;
+    padding-bottom: 60px;*/
 }
+
 .imageGroup {
-    /*height: 80vh;*/
     height: auto;
-    background-color: orange;
-    background-image: url("../images/stgaudens2.jpg");
+    background-image: url("../images/students.jpg");
     background-size: cover;
+    /*z-index: 1;*/
 }
 
 /**** Caroussel ****/
@@ -147,8 +188,9 @@ li {
 
 .events {
     background-color: #E1242D;
-    padding-top: 30px;
-
+    padding-top: 60px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 5px #888888;
 }
 
 .thumbnail {

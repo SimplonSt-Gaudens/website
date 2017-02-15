@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Jérôme //
     var stickyNavTop = $('.menuGen').offset().top;
 
-    var stickyNav = function() {
+    var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > stickyNavTop) {
             $('.menuGen').addClass('sticky');
@@ -13,7 +13,7 @@ $(document).ready(function() {
     };
     stickyNav();
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         stickyNav();
     });
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
     var offset = $("#sidebar").offset();
     var topPadding = 200;
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(window).scrollTop() > offset.top) {
             $("#sidebar").stop().animate({
                 marginTop: $(window).scrollTop() - offset.top + topPadding
@@ -53,7 +53,7 @@ $(document).ready(function() {
         }];
 
         direction = new google.maps.DirectionsRenderer({
-            map: map,
+            map: maCarte,
             panel: panel // Dom element pour afficher les instructions d'itinéraire
         });
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
     }
     google.maps.event.addDomListener(window, 'load', initialisation);
 
-    calculate = function() {
+    calculate = function () {
         origin = document.getElementById('origin').value; // Le point départ
         console.log(origin);
         destination = document.getElementById('destination').value; // Le point d'arrivé
@@ -82,7 +82,7 @@ $(document).ready(function() {
             console.log(request);
             var directionsService = new google.maps.DirectionsService(); // Service de calcul d'itinéraire
             console.log(directionsService);
-            directionsService.route(request, function(response, status) { // Envoie de la requête pour calculer le parcours
+            directionsService.route(request, function (response, status) { // Envoie de la requête pour calculer le parcours
                 if (status == google.maps.DirectionsStatus.OK) {
                     direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
                 }
