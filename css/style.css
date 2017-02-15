@@ -20,7 +20,7 @@ body {
 /**** header ****/
 
 header {
-    background: url("../images/stgaudens2.jpg") no-repeat center center;
+    background: url("../images/stgaudens.jpg") no-repeat center center;
     height: 100vh;
     background-size: cover;
     display: flex;
