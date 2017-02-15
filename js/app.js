@@ -1,9 +1,3 @@
-var map;
-var panel;
-var initialize;
-var calculate;
-var direction;
-
 $(document).ready(function() {
 
     // Jérôme //
@@ -39,6 +33,7 @@ $(document).ready(function() {
             });
         }
     });
+
 
     //Patrick//
     function initialisation() {
@@ -95,8 +90,5 @@ $(document).ready(function() {
             });
         } //http://code.google.com/intl/fr-FR/apis/maps/documentation/javascript/reference.html#DirectionsRequest
     };
-
-
-
 
 });
