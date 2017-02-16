@@ -17,6 +17,20 @@ $(document).ready(function() {
         stickyNav();
     });
 
+    /* konami code */
+    var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+        n = 0;
+    $(document).keydown(function(e) {
+        if (e.keyCode === k[n++]) {
+            if (n === k.length) {
+                $('body').toggleClass("rotate")
+                n = 0;
+                return false;
+            }
+        } else {
+            n = 0;
+        }
+    });
 
     // David //
     var offset = $("#sidebar").offset();
@@ -54,7 +68,8 @@ $(document).ready(function() {
 
         direction = new google.maps.DirectionsRenderer({
             map: maCarte,
-            // panel: panel // Dom element pour afficher les instructions d'itinéraire
+
+
         });
 
 
@@ -74,6 +89,7 @@ $(document).ready(function() {
         var depart = document.getElementById('origin').value; // Le point départ
         console.log(depart);
         var destination = "1 rue de l'Avenir 31800 Saint-Gaudens"; // Le point d'arrivé
+
 
         if (origin && destination) {
             var request = {
