@@ -53,8 +53,8 @@ $(document).ready(function() {
         }];
 
         direction = new google.maps.DirectionsRenderer({
-            map: map,
-            panel: panel // Dom element pour afficher les instructions d'itinéraire
+            map: maCarte,
+            // panel: panel // Dom element pour afficher les instructions d'itinéraire
         });
 
 
@@ -65,17 +65,19 @@ $(document).ready(function() {
             title: "Simplon Saint-Gaudens"
         };
         var marqueur = new google.maps.Marker(optionsMarqueur);
+
+
     }
     google.maps.event.addDomListener(window, 'load', initialisation);
 
     calculate = function() {
-        origin = document.getElementById('origin').value; // Le point départ
-        console.log(origin);
-        destination = document.getElementById('destination').value; // Le point d'arrivé
-        console.log(destination);
+        var depart = document.getElementById('origin').value; // Le point départ
+        console.log(depart);
+        var destination = "1 rue de l'Avenir 31800 Saint-Gaudens"; // Le point d'arrivé
+
         if (origin && destination) {
             var request = {
-                origin: origin,
+                origin: depart,
                 destination: destination,
                 travelMode: google.maps.DirectionsTravelMode.DRIVING // Type de transport
             }
@@ -85,9 +87,67 @@ $(document).ready(function() {
             directionsService.route(request, function(response, status) { // Envoie de la requête pour calculer le parcours
                 if (status == google.maps.DirectionsStatus.OK) {
                     direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
-                }
+
+                    $.ajax({
+                        url: "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + depart + "%7C&destinations=" + destination + "%7C&mode=driving&language=fr-FR&key=AIzaSyBm6euhXQowM8zwx_YPULIYj3rh3HVt5YI",
+
+                        success: function(data) {
+                            var duree = data.rows[0].elements[0].duration.text;
+                            var distance = data.rows[0].elements[0].distance.text;
+                            console.log(data);
+
+
+                            $("#total").append("Entre " + depart + " et " + destination + " en voiture :" + "<li>La durée est de " + duree + ".</li><li> La distance est de " + distance + ".</li>");
+
+                        }
+                    })
+
+
+                };
+
             });
-        } //http://code.google.com/intl/fr-FR/apis/maps/documentation/javascript/reference.html#DirectionsRequest
+        };
+
     };
 
+    function autocompletion() {
+        $("#origin").autocomplete({
+            source: function(request, response) {
+                $.getJSON(
+                    "http://gd.geobytes.com/AutoCompleteCity?callback=?&q=" + request.term,
+                    function(data) {
+                        response(data);
+                    }
+                );
+            },
+            minLength: 3,
+            select: function(event, ui) {
+                var selectedObj = ui.item;
+                $("#origin").val(selectedObj.value);
+                return false;
+            },
+        });
+        $("#origin").autocomplete("option", "delay", 100);
+    };
+    autocompletion();
+
+
+    // function computeTotalDistance(result) {
+    //     var total = 0;
+    //     var myroute = result.routes[0];
+    //     console.log(myroute);
+    //     for (i = 0; i < myroute.legs.length; i++) {
+    //         total += myroute.legs[i].distance.value;
+    //     }
+    //     total = total / 1000.
+    //     console.log(total);
+    //     document.getElementById("total").innerHTML = total + " km";
+
+    // }
+
+    // google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
+    //     computeTotalDistance(directionsDisplay.directions);
+    // });
+
+    google.maps.event.addDomListener(window, 'load', initialisation);
 });
