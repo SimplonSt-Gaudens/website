@@ -8,6 +8,10 @@
     - Simplon Occitanie Rouge : #E1242D
     */
 
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
 * {
     font-family: 'Ubuntu', sans-serif;
 }
