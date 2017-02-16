@@ -17,6 +17,21 @@ $(document).ready(function () {
         stickyNav();
     });
 
+    /* konami code */
+    var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+        n = 0;
+    $(document).keydown(function (e) {
+        if (e.keyCode === k[n++]) {
+            if (n === k.length) {
+                $('body').toggleClass("rotate")
+                n = 0;
+                return false;
+            }
+        }
+        else {
+            n = 0;
+        }
+    });
 
     // David //
     var offset = $("#sidebar").offset();
