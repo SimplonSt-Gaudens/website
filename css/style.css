@@ -127,8 +127,8 @@ li {
     color: white;
     text-align: center;
     width: 80vw;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    padding-top: 2em;
+    padding-bottom: 4em;
 }
 
 .philoText>h3 {
@@ -146,16 +146,11 @@ li {
 
 /****Lesly ****/
 
-.cptces {
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .text {
     /*padding-right: 40px;*/
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-right: 2em;
     /*padding-left: 8%;*/
     /*padding-right: 8%;*/
 }
@@ -163,13 +158,15 @@ li {
 .competencesSection {
     height: auto;
     display: flex;
+    padding-right: 0px;
+    width: 100%;
     /*padding-top: 60px;
     padding-bottom: 60px;*/
 }
 
 .imageGroup {
     height: auto;
-    background-image: url("../images/students.jpg");
+    background: url("../images/students.jpg") no-repeat center center;
     background-size: cover;
     z-index: -1;
 }
@@ -200,7 +197,7 @@ li {
     padding-top: 50%;
     padding-bottom: 20px;
     box-shadow: 0px 4px 5px #888888;
-    padding-top: 30px;
+    padding-top: 3em;
     z-index: 3;
 }
 
@@ -263,7 +260,28 @@ footer {
 
 /* A conserver en bas de cette page - pour responsive */
 
+@media (max-width: 991px) {
+    #logotop {
+        height: 40vh;
+    }
+    .text {
+        margin-left: 4em;
+    }
+}
+
+@media (min-device-width: 1024px) and (max-device-width: 1366px) {
+    #logotop {
+        height: 40vh;
+    }
+}
+
 @media (max-width: 767px) {
+    #logotop {
+        height: 50vh;
+    }
+    .imageGroup {
+        display: none;
+    }
     #logotop {
         height: 35vh;
     }
@@ -276,6 +294,9 @@ footer {
     }
     #sidebar {
         display: none;
+    }
+    .text {
+        margin-left: 2em;
     }
 }
 
