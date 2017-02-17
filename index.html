@@ -4,36 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <title>Simplon Saint-Gaudens</title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />-->
+    <link rel="icon" href="images/favicon.ico">
+    <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 
-<!-- !!!! N'oubliez pas de faire npm intall pour récupérer les dépendances (jquery et bootstrap) !!!! -->
+<!-- !!!! N'oubliez pas de faire npm intall pour récupérer les dépendances (jquery, jquery-UI et bootstrap)  et aussi npm install font-awesome --save !!!! -->
 
 <body>
     <header>
-        <!-- Jerome -->
+        <img id="logotop" src="images/simplonoccitanie.png" alt="Simplon Occitanie">
+        <h1>&lt Saint-Gaudens /&gt</h1>
+        <a id="pagetop"></a>
     </header>
+    <section class="menuGen">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" id="simplon-nav">Simplon Saint-Gaudens</a>
+            </div>
+            <div class="collapse navbar-collapse menu">
+                <ul class="nav navbar-nav">
+                    <li><a id="navlink" href="#citation">L'Initiative Simplon</a></li>
+                    <li><a id="navlink" href="#atouts">Nos atouts</a></li>
+                    <li><a id="navlink" href="#actu">Actualité</a></li>
+                    <li><a id="navlink" href="#carteStGau">Nous rejoindre</a></li>
+                    <li><a id="navlink" href="#contact">Nous contacter</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- David -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="#pagetop" id="sidebar-menu" title="Début de page"><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></a></li>
+            <li>
+                <a href="https://twitter.com/Simplon_Occ" target="_blank" id="sidebar-menu" title="Suivez-nous sur Twitter"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/simplon.stgo/?fref=ts" target="_blank" id="sidebar-menu" title="Suivez-nous sur Facebook"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#pagebottom" id="sidebar-menu" title="Fin de page"><i class="fa fa-arrow-circle-down fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
+        </ul>
+    </div>
     <section>
-        <!-- Quentin -->
+        <div class="container-fluid philosophie" id="citation">
+            <div class="container philoText">
+                <h3>
+                    "Beaucoup de personnes sont malheureusement obligées de quitter le Comminges pour se former dans des formations post-BAC.
+                    La mise en place d'une formation Simplon "développeur/se web" à St Gaudens est donc une excellente initiative
+                    pour les apprenants, mais également pour le territoire et son développement économique."
+                </h3>
+                <p>-Cyril Gousse, Directeur de <a href="http://www.prosoluce.fr" target="_blank">Prosoluce</a> et parrain de
+                    la promotion Simplon St-Gaudens 2016/2017</p>
+            </div>
+        </div>
     </section>
     <section>
-        <!-- Jeff/Lesly -->
-    </section>
-    <section>
-        <!-- Cyril -->
-    </section>
-    <section>
-        <!-- David -->
-    </section>
-    <section>
-        <!-- Patrick/Raphael -->
-    </section>
-    <footer>
+        <div class="competencesSection container" id="atouts">
 
-    </footer>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="js/app.js"></script>
+            <div class=" container col-md-5 col-md-offset-1 col-sm-12 text">
+                <div class="competencesText">
+                    <h4><a title="Competence" href="#">Lorem ipsum</a></h4>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod vero hic tenetur fugit nemo perspiciatis!
+                        Assumenda expedita harum tempore omnis quia repudiandae quas sunt recusandae, culpa eligendi. Suscipit,
+                        aspernatur esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis quia
+                        sunt. Voluptatem architecto, doloribus impedit eligendi odio aut sunt soluta accusantium, nostrum
+                        animi voluptates, nesciunt veniam, saepe consectetur corporis.
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod vero hic tenetur fugit nemo perspiciatis!
+                            Assumenda expedita harum tempore omnis quia repudiandae quas sunt recusandae, culpa eligendi.
+                            Suscipit, aspernatur esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
+                            facilis quia sunt. Voluptatem architecto, doloribus impedit eligendi odio aut sunt soluta accusantium,
+                            nostrum animi voluptates, nesciunt veniam, saepe consectetur corporis.
+                        </p>
+
+                </div>
+                <!--<div class="atoutText">
+                    <h4><a title="Competence" href="#">Lorem ipsum</a></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod vero hic tenetur fugit nemo perspiciatis!
+                        Assumenda expedita harum tempore omnis quia repudiandae quas sunt recusandae, culpa eligendi. Suscipit,
+                        aspernatur esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis quia
+                        sunt. Voluptatem architecto, doloribus impedit eligendi odio aut sunt soluta accusantium, nostrum
+                        animi voluptates, nesciunt veniam, saepe consectetur corporis.
+                    </p>
+                </div>-->
+            </div>
+
+            <div class="col-md-6  imageGroup">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="actu">
+
+        <div class="container-fluid cards-row events">
+            <div class="container">
+
+                <h3>Événements et Activités à venir</h3>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/350x200" alt="Bootstrap Thumbnail: Beautiful Bootstrap Thumbnail like Material Design Cards">
+                        <div class="caption">
+                            <h3>Titre événement 1</h3>
+                            <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At numquam perferendis, incidunt odit
+                                nostrum sed corporis perspiciatis, unde accusamus natus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/350x200" alt="Bootstrap Thumbnail Customization">
+                        <div class="caption">
+                            <h3>Titre événement 2</h3>
+                            <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dicta nobis error assumenda,
+                                porro numquam dolorum odit voluptatibus illo incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/350x200" alt="Bootstrap Thumbnail Customization">
+                        <div class="caption">
+                            <h3>Titre événement 2</h3>
+                            <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dicta nobis error assumenda,
+                                porro numquam dolorum odit voluptatibus illo incidunt.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section>
+
+    </section>
+
+    <section class="api" id="carteStGau">
+
+        <!-- Patrick/Raphael -->
+        <div class="col-md-6" id="carte">
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMo2ekPEsFUR_VhUrHockCgOnfO7UoXBk"></script>
+        </div>
+
+
+        <div class="col-md-6" id="coord">
+
+            <h4>adresse:</h4>
+            <p>MJC du Saint-Gaudinnois<br>1, rue de l'Avenir<br>31800 Saint-Gaudens</p><br>
+            <h4>Pour contacter nos formateurs:</h4>
+            <p><strong>Mail: </strong><a href="url:simplon_stgau_formateurs@framalistes.org"> Formateurs Simplon</a><br><br></p>
+
+            <h4>Pour nous rejoindre :</h4><br>
+            <div id="destinationForm">
+                <form action="" method="get" name="direction" id="direction">
+                    <label>Point de départ :</label>
+                    <input type="text" name="origin" id="origin">
+                    <!--<label>Destination :</label>
+                    <input type="text" name="destination" id="destination">-->
+                    <input type="button" value="Calculer l'itinéraire" onclick="javascript:calculate()"></form>
+
+</div>
+<div id="panel"></div>
+
+<div id="total">
+
+
+</div>
+
+</div>
+
+</section>
+<a id="pagebottom"></a>
+
+
+
+
+<footer>
+    <!-- David -->
+    <div class="container" id="contact">
+        <div id="top-footer">
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval=2000>
+                        <h3>Ils nous font confiance:</h3>
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <a href="http://www.ccsg.fr/communaute-de-communes.html" target="_blank"><img class="img-responsive" src="images/logo_ccsg.png" alt=""></a>
+                            </div>
+                            <div class="item active">
+                                <a href="http://www.mjc-st-gaudens.org/cyber-base" target="_blank"><img class="img-responsive" src="images/logo_mjc_cyberbase.png" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="http://www.laregion.fr/-La-nouvelle-Region-30875-" target="_blank"><img class="img-responsive" src="images/logo_cr_occitanie.png" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="http://www.prosoluce.fr/" target="_blank"><img class="img-responsive" src="images/logo_prosoluce.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div id="bottom-footer">
+            <div class="row bottom"><br>
+                <div class="col-sm-4 text-left">
+                    <a href="http://simplon.co/" target="_blank" title="Simplon France">Simplon France</a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <span class="fa-copyright fa-sm">
+                        Copyright 2017
+                    </div>
+                    <div class="col-sm-4 text-right">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle text-primary fa-stack-2x"></i>
+                            <a href="https://www.facebook.com/simplon.stgo/?fref=ts" target="_blank" title="Suivez-nous sur Facebook"><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a>
+                        </span>
+                    <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle text-info fa-stack-2x"></i>
+                            <a href="https://twitter.com/Simplon_Occ" target="_blank" title="Suivez-nous sur Twitter"><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></a>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+</script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/smoothscroll.js"></script>
+
 </body>
 
 </html>
