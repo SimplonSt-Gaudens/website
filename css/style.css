@@ -273,11 +273,10 @@ footer {
     }
 }
 
-/*@media (min-device-width: 1024px) and (max-device-width: 1366px) {
-    #logotop {
-        height: 40vh;
-    }
-}*/
+@media only (min-device-width : 1024px) and (max-device-width : 1366px)  {
+#logotop {
+    height: 40vh;
+}
 
 @media (max-width: 767px) {
     #logotop {
