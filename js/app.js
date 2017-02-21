@@ -112,7 +112,7 @@ $(document).ready(function () {
                             var distance = data.rows[0].elements[0].distance.text;
                             console.log(data);
 
-                            $("#total").append("Entre " + depart + " et " + destination + " en voiture :" + "<li>La durée est de " + duree + ".</li><li> La distance est de " + distance + ".</li>");
+                            $("#total").html("Entre " + depart + " et " + destination + " en voiture :" + "<li>La durée est de " + duree + ".</li><li> La distance est de " + distance + ".</li>");
 
                         }
                     })
