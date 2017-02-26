@@ -120,8 +120,8 @@ $(document).ready(function() {
                             var distance = data.rows[0].elements[0].distance.text;
                             console.log(data);
 
-
                             $("#total").html("En voiture, votre trajet pour nous rejoindre durera  " + duree + " pour une distance de " + distance + ".</li>");
+
 
                         }
                     })
