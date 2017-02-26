@@ -205,6 +205,11 @@ li {
     z-index: 3;
 }
 
+.caption > a {
+    color: white;
+    text-align: pull-right;
+}
+
 .thumbnail {
     background-color: transparent;
     border: 0px;

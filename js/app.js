@@ -116,13 +116,9 @@ $(document).ready(function() {
 
                         }
                     })
-
-
                 };
-
             });
         };
-
     };
 
     function autocompletion() {
