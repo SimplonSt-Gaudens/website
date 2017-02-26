@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Jérôme //
     var stickyNavTop = $('.menuGen').offset().top;
 
-    var stickyNav = function() {
+    var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > stickyNavTop) {
             $('.menuGen').addClass('sticky');
@@ -13,14 +13,14 @@ $(document).ready(function() {
     };
     stickyNav();
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         stickyNav();
     });
 
     /* konami code */
     var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
         n = 0;
-    $(document).keydown(function(e) {
+    $(document).keydown(function (e) {
         if (e.keyCode === k[n++]) {
             if (n === k.length) {
                 $('body').toggleClass("rotate")
@@ -36,7 +36,7 @@ $(document).ready(function() {
     var offset = $("#sidebar").offset();
     var topPadding = 200;
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(window).scrollTop() > offset.top) {
             $("#sidebar").stop().animate({
                 marginTop: $(window).scrollTop() - offset.top + topPadding
@@ -85,7 +85,15 @@ $(document).ready(function() {
     }
     google.maps.event.addDomListener(window, 'load', initialisation);
 
-    calculate = function() {
+    document.onkeypress = function (e) {
+        var enterpressed = e ? e.which == 13 : window.event.keyCode == 13;
+        if (enterpressed) {
+            calculate();
+            return false;
+        }
+    }
+
+    calculate = function () {
         var depart = document.getElementById('origin').value; // Le point départ
         console.log(depart);
         var destination = "1 rue de l'Avenir 31800 Saint-Gaudens"; // Le point d'arrivé
@@ -100,19 +108,20 @@ $(document).ready(function() {
             console.log(request);
             var directionsService = new google.maps.DirectionsService(); // Service de calcul d'itinéraire
             console.log(directionsService);
-            directionsService.route(request, function(response, status) { // Envoie de la requête pour calculer le parcours
+            directionsService.route(request, function (response, status) { // Envoie de la requête pour calculer le parcours
                 if (status == google.maps.DirectionsStatus.OK) {
                     direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
 
                     $.ajax({
                         url: "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + depart + "%7C&destinations=" + destination + "%7C&mode=driving&language=fr-FR&key=AIzaSyBm6euhXQowM8zwx_YPULIYj3rh3HVt5YI",
 
-                        success: function(data) {
+                        success: function (data) {
                             var duree = data.rows[0].elements[0].duration.text;
                             var distance = data.rows[0].elements[0].distance.text;
                             console.log(data);
 
-                            $("#total").html("Entre " + depart + " et " + destination + " en voiture :" + "<li>La durée est de " + duree + ".</li><li> La distance est de " + distance + ".</li>");
+                            $("#total").html("En voiture, votre trajet pour nous rejoindre durera  " + duree + " pour une distance de " + distance + ".</li>");
+
 
                         }
                     })
@@ -123,20 +132,27 @@ $(document).ready(function() {
 
     function autocompletion() {
         $("#origin").autocomplete({
-            source: function(request, response) {
+            source: function (request, response) {
                 $.getJSON(
-                    "http://gd.geobytes.com/AutoCompleteCity?callback=?&q=" + request.term,
-                    function(data) {
+                    "http://gd.geobytes.com/AutoCompleteCity?callback=?&filter=FR&q=" + request.term,
+                    function (data) {
                         response(data);
+                        maxRows: 3;
                     }
                 );
             },
             minLength: 3,
-            select: function(event, ui) {
+            select: function (event, ui) {
                 var selectedObj = ui.item;
                 $("#origin").val(selectedObj.value);
                 return false;
             },
+            open: function () {
+                jQuery(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+            },
+            close: function () {
+                jQuery(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+            }
         });
         $("#origin").autocomplete("option", "delay", 100);
     };
