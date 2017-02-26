@@ -235,9 +235,32 @@ section>.api {
     height: 100vh;
 }
 
+h4 {
+    text-decoration: underline;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
 #coord {
-    padding-top: 150px;
-    text-align: center;
+    padding-top: 70px;
+}
+
+#total {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.ui-menu .ui-menu-item a,
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.ui-autocomplete-loading {
+    background: white url("../images/ui-anim_basic_16x16.gif") right center no-repeat;
 }
 
 
