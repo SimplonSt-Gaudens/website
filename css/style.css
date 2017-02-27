@@ -293,6 +293,12 @@ footer {
     display: none;
 }
 
+.logoLang {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+
 
 /* A conserver en bas de cette page - pour responsive */
 
