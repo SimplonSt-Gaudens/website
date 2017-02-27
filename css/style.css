@@ -289,6 +289,10 @@ footer {
     /*justify-content: center;*/
 }
 
+#sidebar {
+    display: none;
+}
+
 
 /* A conserver en bas de cette page - pour responsive */
 
