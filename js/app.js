@@ -95,19 +95,19 @@ $(document).ready(function() {
 
     calculate = function() {
         var depart = document.getElementById('origin').value; // Le point départ
-        console.log(depart);
+        // console.log(depart);
         var destination = "1 rue de l'Avenir 31800 Saint-Gaudens"; // Le point d'arrivé
 
 
         if (origin && destination) {
             var request = {
-                origin: depart,
-                destination: destination,
-                travelMode: google.maps.DirectionsTravelMode.DRIVING // Type de transport
-            }
-            console.log(request);
+                    origin: depart,
+                    destination: destination,
+                    travelMode: google.maps.DirectionsTravelMode.DRIVING // Type de transport
+                }
+                // console.log(request);
             var directionsService = new google.maps.DirectionsService(); // Service de calcul d'itinéraire
-            console.log(directionsService);
+            // console.log(directionsService);
             directionsService.route(request, function(response, status) { // Envoie de la requête pour calculer le parcours
                 if (status == google.maps.DirectionsStatus.OK) {
                     direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
@@ -118,7 +118,7 @@ $(document).ready(function() {
                         success: function(data) {
                             var duree = data.rows[0].elements[0].duration.text;
                             var distance = data.rows[0].elements[0].distance.text;
-                            console.log(data);
+                            // console.log(data);
 
                             $("#total").html("En voiture, votre trajet pour nous rejoindre durera  " + duree + " pour une distance de " + distance + ".</li>");
 
