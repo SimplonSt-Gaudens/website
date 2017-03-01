@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,700i&subset=latin-ext');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,700i&subset=latin-ext');
 
 /* font-family: 'Ubuntu', sans-serif; */
 
@@ -249,7 +249,7 @@ h4 {
 
 #coord {
     padding-top: 70px;
-    text-align: center; 
+    text-align: center;
 }
 
 #total {
@@ -325,24 +325,30 @@ footer {
     .imageGroup {
         display: none;
     }
-    #logotop {
-        height: 35vh;
+    @media (max-width: 767px) {
+        #logotop {
+            height: 50vh;
+        }
+        .imageGroup {
+            display: none;
+        }
+        #logotop {
+            height: 35vh;
+        }
+        header>h1 {
+            font-size: 30px;
+        }
+        div.navbar.navbar-default {
+            display: flex;
+            flex-direction: column
+        }
+        #sidebar {
+            display: none;
+        }
+        .text {
+            margin-left: 2em;
+        }
     }
-    header>h1 {
-        font-size: 30px;
+    .rotate {
+        transform: rotate(180deg);
     }
-    div.navbar.navbar-default {
-        display: flex;
-        flex-direction: column
-    }
-    #sidebar {
-        display: none;
-    }
-    .text {
-        margin-left: 2em;
-    }
-}
-
-.rotate {
-    transform: rotate(180deg)
-}
