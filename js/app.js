@@ -134,7 +134,7 @@ $(document).ready(function() {
         $("#origin").autocomplete({
             source: function(request, response) {
                 $.getJSON(
-                    "http://gd.geobytes.com/AutoCompleteCity?callback=?&filter=FR&q=" + request.term,
+                    "https://gd.geobytes.com/AutoCompleteCity?callback=?&filter=FR&q=" + request.term,
                     function(data) {
                         response(data);
                         maxRows: 3;
