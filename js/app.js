@@ -113,7 +113,6 @@ $(document).ready(function() {
                     direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
 
                     $.ajax({
-                        crossDomain: true,
                         url: "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + depart + "%7C&destinations=" + destination + "%7C&mode=driving&language=fr-FR&key=AIzaSyBm6euhXQowM8zwx_YPULIYj3rh3HVt5YI",
 
                         success: function(data) {
