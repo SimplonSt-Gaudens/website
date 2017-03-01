@@ -118,24 +118,16 @@ $(document).ready(function() {
                         jsonpCallback: 'callbackFnc',
                         async: false,
                         crossDomain: true,
+                        headers: {
+                            'Access-Control-Allow-Origin': '*'
+                        },
                         success: function(data) {
                             var duree = data.rows[0].elements[0].duration.text;
                             var distance = data.rows[0].elements[0].distance.text;
                             // console.log(data);
 
                             $("#total").html("En voiture, votre trajet pour nous rejoindre durera  " + duree + " pour une distance de " + distance + ".</li>");
-                        },
-                        failure: function() {},
-                        complete: function(data) {
-                            if (data.readyState == '4' && data.status == '200') {
-                                errorLog.push({ IP: Host, Status: 'SUCCESS' })
-                            } else {
-                                errorLog.push({ IP: Host, Status: 'FAIL' })
-                            }
                         }
-
-
-
                     })
                 };
             });
