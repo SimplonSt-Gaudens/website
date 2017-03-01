@@ -114,16 +114,28 @@ $(document).ready(function() {
 
                     $.ajax({
                         url: "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + depart + "%7C&destinations=" + destination + "%7C&mode=driving&language=fr-FR&key=AIzaSyBm6euhXQowM8zwx_YPULIYj3rh3HVt5YI",
-
+                        dataType: 'JSONP',
+                        jsonpCallback: 'callbackFnc',
+                        async: false,
+                        crossDomain: true,
                         success: function(data) {
                             var duree = data.rows[0].elements[0].duration.text;
                             var distance = data.rows[0].elements[0].distance.text;
                             // console.log(data);
 
                             $("#total").html("En voiture, votre trajet pour nous rejoindre durera  " + duree + " pour une distance de " + distance + ".</li>");
-
-
+                        },
+                        failure: function() {},
+                        complete: function(data) {
+                            if (data.readyState == '4' && data.status == '200') {
+                                errorLog.push({ IP: Host, Status: 'SUCCESS' })
+                            } else {
+                                errorLog.push({ IP: Host, Status: 'FAIL' })
+                            }
                         }
+
+
+
                     })
                 };
             });
