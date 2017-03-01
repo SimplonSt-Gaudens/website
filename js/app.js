@@ -114,11 +114,6 @@ $(document).ready(function() {
 
                     $.ajax({
                         url: "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + depart + "%7C&destinations=" + destination + "%7C&mode=driving&language=fr-FR&key=AIzaSyBm6euhXQowM8zwx_YPULIYj3rh3HVt5YI",
-                        async: false,
-                        crossDomain: true,
-                        headers: {
-                            'Access-Control-Allow-Origin': '*'
-                        },
                         success: function(data) {
                             var duree = data.rows[0].elements[0].duration.text;
                             var distance = data.rows[0].elements[0].distance.text;
