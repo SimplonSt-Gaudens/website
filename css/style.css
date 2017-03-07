@@ -46,10 +46,35 @@ header>h1 {
     margin-left: 15vw;
 }
 
+header a:hover {
+    text-decoration: none;
+}
+
+#linkvideo {
+    color: white;
+    text-decoration: none;
+}
+#linkvideo:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+
 #logotop {
     height: 70vh;
 }
 
+.modal-content {
+	background-color: #1D1F21;
+}
+
+#myModal {
+    text-align: center;
+}
 
 /**** navbar ****/
 
@@ -241,7 +266,7 @@ section>.api {
     height: 100vh;
 }
 
-h4 {
+#coord > h4 {
     text-decoration: underline;
     padding-top: 20px;
     font-size: 20px;
@@ -249,7 +274,7 @@ h4 {
 
 #coord {
     padding-top: 70px;
-    text-align: center; 
+    text-align: center;
 }
 
 #total {
