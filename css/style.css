@@ -46,10 +46,35 @@ header>h1 {
     margin-left: 15vw;
 }
 
+header a:hover {
+    text-decoration: none;
+}
+
+#linkvideo {
+    color: white;
+    text-decoration: none;
+}
+#linkvideo:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+
 #logotop {
     height: 70vh;
 }
 
+.modal-content {
+	background-color: #1D1F21;
+}
+
+#myModal {
+    text-align: center;
+}
 
 /**** navbar ****/
 
@@ -150,8 +175,6 @@ li {
 
 /****Lesly ****/
 
-
-
 .text {
     /*padding-right: 40px;*/
     padding-top: 5%;
@@ -176,7 +199,6 @@ li {
     background-size: cover;
     z-index: -1;
 }
-
 
 
 /**** Caroussel ****/
@@ -206,6 +228,11 @@ li {
     box-shadow: 0px 4px 5px #888888;
     padding-top: 3em;
     z-index: 3;
+}
+
+.caption>a {
+    color: white;
+    text-align: pull-right;
 }
 
 .thumbnail {
@@ -239,9 +266,33 @@ section>.api {
     height: 100vh;
 }
 
+#coord > h4 {
+    text-decoration: underline;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
 #coord {
-    padding-top: 150px;
+    padding-top: 70px;
     text-align: center;
+}
+
+#total {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.ui-menu .ui-menu-item a,
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.ui-autocomplete-loading {
+    background: white url("../images/ui-anim_basic_16x16.gif") right center no-repeat;
 }
 
 
@@ -264,22 +315,29 @@ footer {
     /*justify-content: center;*/
 }
 
+#sidebar {
+    display: none;
+}
+
+.logoLang {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+
 
 /* A conserver en bas de cette page - pour responsive */
 
-
-
 @media (max-width: 991px) {
-
-#logotop {
-    height: 40vh;
-}
-
+    #logotop {
+        height: 40vh;
+    }
     .text {
-    margin-left: 4em;
+        margin-left: 4em;
     }
 }
 
+<<<<<<< HEAD
 @media only (min-device-width : 1024px) and (max-device-width : 1366px)  {
 #logotop {
     height: 40vh;
@@ -293,8 +351,21 @@ footer {
 
 .imageGroup {
     display: none;
+=======
+@media only (min-device-width: 1024px) and (max-device-width: 1366px) {
+    #logotop {
+        height: 40vh;
+    }
+>>>>>>> dev
 }
 
+@media (max-width: 767px) {
+    #logotop {
+        height: 50vh;
+    }
+    .imageGroup {
+        display: none;
+    }
     #logotop {
         height: 35vh;
     }
@@ -308,14 +379,10 @@ footer {
     #sidebar {
         display: none;
     }
-
     .text {
-    margin-left: 2em;
+        margin-left: 2em;
     }
-
 }
-
-
 
 .rotate {
     transform: rotate(180deg)

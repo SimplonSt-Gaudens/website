@@ -85,6 +85,14 @@ $(document).ready(function () {
     }
     google.maps.event.addDomListener(window, 'load', initialisation);
 
+    document.onkeypress = function (e) {
+        var enterpressed = e ? e.which == 13 : window.event.keyCode == 13;
+        if (enterpressed) {
+            calculate();
+            return false;
+        }
+    }
+
     calculate = function () {
         var depart = document.getElementById('origin').value; // Le point départ
         console.log(depart);
@@ -112,26 +120,24 @@ $(document).ready(function () {
                             var distance = data.rows[0].elements[0].distance.text;
                             console.log(data);
 
-                            $("#total").html("Entre " + depart + " et " + destination + " en voiture :" + "<li>La durée est de " + duree + ".</li><li> La distance est de " + distance + ".</li>");
+                            $("#total").html("En voiture, votre trajet pour nous rejoindre durera  " + duree + " pour une distance de " + distance + ".</li>");
+
 
                         }
                     })
-
-
                 };
-
             });
         };
-
     };
 
     function autocompletion() {
         $("#origin").autocomplete({
             source: function (request, response) {
                 $.getJSON(
-                    "http://gd.geobytes.com/AutoCompleteCity?callback=?&q=" + request.term,
+                    "http://gd.geobytes.com/AutoCompleteCity?callback=?&filter=FR&q=" + request.term,
                     function (data) {
                         response(data);
+                        maxRows: 3;
                     }
                 );
             },
@@ -141,6 +147,12 @@ $(document).ready(function () {
                 $("#origin").val(selectedObj.value);
                 return false;
             },
+            open: function () {
+                jQuery(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+            },
+            close: function () {
+                jQuery(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+            }
         });
         $("#origin").autocomplete("option", "delay", 100);
     };
