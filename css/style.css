@@ -350,9 +350,16 @@ width: auto;
 
 #regionlogo{
     height: 10em;
+    width: auto;
 }
 #communaute {
     height: 10em;
+    width: auto;
+}
+
+#mfr {
+    height: 13em;
+    width: auto;
 }
 
 #financeurs {
