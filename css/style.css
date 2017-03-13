@@ -384,15 +384,15 @@ width: auto;
     .text {
         margin-left: 4em;
     }
-        #region {
-        width:100vw;
+    #region {
+        width:50vw;
     }
 }
 
 
 @media only (min-device-width : 1024px) and (max-device-width : 1366px)  {
 #logotop {
-    height: 40vh;
+    height: 30vh;
 }
 
 }
@@ -402,6 +402,17 @@ width: auto;
  @media (max-width: 767px) {
     #logotop {
         height: 20vh;
+    }
+    #linkvideo {
+        font-size: 1.5em;
+    }
+#partenaires .container img{
+
+width: 40vw;
+}
+    #region {
+        padding-top: 10em;
+        width:60vw;
     }
     .imageGroup {
         display: none;
