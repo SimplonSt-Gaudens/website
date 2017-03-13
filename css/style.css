@@ -17,8 +17,8 @@
 }
 
 body {
-    /*background-color: #F8F8F8;*/
-    background-color: #DCDCDC;
+    background-color: #F8F8F8;
+    /*background-color: #DCDCDC;*/
 }
 
 .philoText a,
@@ -275,7 +275,7 @@ section>.api {
 }
 
 #coord > h4 {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     padding-top: 20px;
     font-size: 20px;
 }
@@ -334,6 +334,47 @@ footer {
 }
 
 
+/* partenaires et financeurs */
+
+#partenaires {
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+#partenaires .container img{
+    margin-top: 3em;
+    padding-right: 1em;
+width: auto;
+}
+
+#regionlogo{
+    height: 10em;
+}
+#communaute {
+    height: 10em;
+}
+
+#financeurs {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    color: white;
+    text-align: center;
+    background: #E1242D;
+    box-shadow: 0px 4px 5px #888888;
+}
+
+#financeurs img {
+    margin: 3em;
+    height: 10em;
+    /*border: 4px white solid;*/
+    box-shadow: 0px 0px 20px 1px white;
+
+}
+
+
+
+
 /* A conserver en bas de cette page - pour responsive */
 
 @media (max-width: 991px) {
@@ -343,67 +384,49 @@ footer {
     .text {
         margin-left: 4em;
     }
+        #region {
+        width:100vw;
+    }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 @media only (min-device-width : 1024px) and (max-device-width : 1366px)  {
 #logotop {
     height: 40vh;
 }
 
 }
-@media (max-width: 767px) {
-#logotop {
-    height: 50vh;
-}
 
-.imageGroup {
-    display: none;
-=======
-=======
->>>>>>> b3be49bcaae8e4881216414f8f234e42aa57cf12
-@media only (min-device-width: 1024px) and (max-device-width: 1366px) {
-    #logotop {
-        height: 40vh;
-    }
-<<<<<<< HEAD
->>>>>>> dev
-=======
->>>>>>> b3be49bcaae8e4881216414f8f234e42aa57cf12
-}
 
-@media (max-width: 767px) {
+
+ @media (max-width: 767px) {
     #logotop {
-        height: 50vh;
+        height: 20vh;
     }
     .imageGroup {
         display: none;
     }
-    @media (max-width: 767px) {
-        #logotop {
-            height: 50vh;
-        }
-        .imageGroup {
-            display: none;
-        }
-        #logotop {
-            height: 35vh;
-        }
-        header>h1 {
-            font-size: 30px;
-        }
-        div.navbar.navbar-default {
-            display: flex;
-            flex-direction: column
-        }
-        #sidebar {
-            display: none;
-        }
-        .text {
-            margin-left: 2em;
-        }
+    #logotop {
+        height: 35vh;
     }
+    header>h1 {
+        font-size: 30px;
+    }
+    div.navbar.navbar-default {
+        display: flex;
+        flex-direction: column
+    }
+    #sidebar {
+        display: none;
+    }
+    .text {
+        margin-left: 2em;
+    }
+    #region {
+        padding-top: 10em;
+        width:60vw;
+    }
+}
     .rotate {
         transform: rotate(180deg);
     }
