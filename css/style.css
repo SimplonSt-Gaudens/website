@@ -18,7 +18,6 @@
 
 body {
     background-color: #F8F8F8;
-    /*background-color: #DCDCDC;*/
 }
 
 .philoText a,
@@ -157,7 +156,7 @@ li {
 .philosophie {
     background-color: #E1242D;
     z-index: 3;
-    box-shadow: 0px 4px 5px #888888;
+    /*box-shadow: 0px 4px 5px #888888;*/
 }
 
 .philoText {
@@ -233,7 +232,7 @@ li {
     background-color: #E1242D;
     padding-top: 50%;
     padding-bottom: 20px;
-    box-shadow: 0px 4px 5px #888888;
+    /*box-shadow: 0px 4px 5px #888888;*/
     padding-top: 3em;
     z-index: 3;
 }
@@ -308,7 +307,7 @@ section>.api {
 
 footer {
     background-color: #E1242D;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -316,11 +315,16 @@ footer {
     color: white;
 }
 
+#simplonFrance {
+    color: white;
+}
+
 .bottom {
     display: flex;
     align-items: center;
-    padding-bottom: 1%;
-    /*justify-content: center;*/
+    padding-bottom: 5%;
+    justify-content: center;
+    height: 100%;
 }
 
 #sidebar {
@@ -331,6 +335,10 @@ footer {
     display: flex;
     justify-content: space-around;
     padding-top: 2%;
+}
+
+.circleGit {
+    color: #24292E;
 }
 
 
@@ -345,7 +353,7 @@ footer {
 #partenaires .container img{
     margin-top: 3em;
     padding-right: 1em;
-width: auto;
+    width: auto;
 }
 
 #regionlogo{
@@ -368,14 +376,14 @@ width: auto;
     color: white;
     text-align: center;
     background: #E1242D;
-    box-shadow: 0px 4px 5px #888888;
+    /*box-shadow: 0px 4px 5px #888888;*/
 }
 
 #financeurs img {
     margin: 3em;
     height: 10em;
     /*border: 4px white solid;*/
-    box-shadow: 0px 0px 20px 1px white;
+    /*box-shadow: 0px 0px 20px 1px white;*/
 
 }
 
