@@ -1,6 +1,6 @@
     @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,700i&subset=latin-ext');
 
-/* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Ubuntu', sans-serif; */
 
 
 /* color :
@@ -8,78 +8,78 @@
     - Simplon Occitanie Rouge : #E1242D
     */
 
-.ui-helper-hidden-accessible {
-    display: none;
-}
+    .ui-helper-hidden-accessible {
+        display: none;
+    }
 
-* {
-    font-family: 'Ubuntu', sans-serif;
-}
+    * {
+        font-family: 'Ubuntu', sans-serif;
+    }
 
-body {
-    background-color: #F8F8F8;
-}
+    body {
+        background-color: #F8F8F8;
+    }
 
-.philoText a,
-.philoText a:visited,
-.philoText a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-
-/**** header ****/
-
-header {
-    background: url("../images/Simplon-2-1.jpg") no-repeat center center;
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header>h1 {
-    color: white;
-    margin-left: 15vw;
-}
-
-header a:hover {
-    text-decoration: none;
-}
-
-#linkvideo {
-    color: white;
-    text-decoration: none;
-    font-size: 2em;
-}
-#linkvideo:hover {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    cursor: hand;
-}
+    .philoText a,
+    .philoText a:visited,
+    .philoText a:hover {
+        color: white;
+        text-decoration: none;
+    }
 
 
+    /**** header ****/
+
+    header {
+        background: url("../images/Simplon-2-1.jpg") no-repeat center center;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header>h1 {
+        color: white;
+        margin-left: 15vw;
+    }
+
+    header a:hover {
+        text-decoration: none;
+    }
+
+    #linkvideo {
+        color: white;
+        text-decoration: none;
+        font-size: 2em;
+    }
+    #linkvideo:hover {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        cursor: hand;
+    }
 
 
-#logotop {
-    height: 70vh;
-    /*margin-top: 4em;*/
-}
 
-#region {
-    width: 15vw;
-    padding-top: 1em;
-    margin-bottom: 1em;
-}
 
-.modal-content {
-	background-color: #1D1F21;
-}
+    #logotop {
+        height: 70vh;
+        /*margin-top: 4em;*/
+    }
 
-#myModal {
+    #region {
+        width: 15vw;
+        padding-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .modal-content {
+       background-color: #1D1F21;
+   }
+
+   #myModal {
     text-align: center;
 }
 
@@ -406,25 +406,25 @@ footer {
 
 
 @media only (min-device-width : 1024px) and (max-device-width : 1366px)  {
-#logotop {
-    height: 30vh;
-}
+    #logotop {
+        height: 30vh;
+    }
 
 }
 
 
 
- @media (max-width: 767px) {
+@media (max-width: 767px) {
     #logotop {
         height: 20vh;
     }
     #linkvideo {
         font-size: 1.5em;
     }
-#partenaires .container img{
+    #partenaires .container img{
 
-width: 40vw;
-}
+        width: 40vw;
+    }
     #region {
         padding-top: 10em;
         width:60vw;
@@ -453,6 +453,6 @@ width: 40vw;
         width:60vw;
     }
 }
-    .rotate {
-        transform: rotate(180deg);
-    }
+.rotate {
+    transform: rotate(180deg);
+}
