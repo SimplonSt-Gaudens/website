@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log('coucou');
 
     // Jérôme //
     var stickyNavTop = $('.menuGen').offset().top;
@@ -21,7 +22,7 @@ $(document).ready(function () {
 
     /* konami code */
     var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
-        n = 0;
+    n = 0;
     $(document).keydown(function (e) {
         if (e.keyCode === k[n++]) {
             if (n === k.length) {
@@ -64,7 +65,7 @@ $(document).ready(function () {
             featureType: "poi",
             elementType: "labels",
             stylers: [
-                { visibility: "off" }
+            { visibility: "off" }
             ]
         }];
 
@@ -138,7 +139,7 @@ $(document).ready(function () {
                         response(data);
                         maxRows: 3;
                     }
-                );
+                    );
             },
             minLength: 3,
             select: function (event, ui) {
