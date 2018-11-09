@@ -262,9 +262,9 @@ li {
 
 /**** API ****/
 
-#carte {
+/* #carte {
     z-index: -1;
-}
+} */
 
 section>.api {
     height: 100vh;
