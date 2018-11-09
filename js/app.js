@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log('Coucou c\'est Simplon Saint-Gaudens!);
+    console.log('Coucou c\'est Simplon Saint-Gaudens!');
 
     // Jérôme //
     var stickyNavTop = $('.menuGen').offset().top;
