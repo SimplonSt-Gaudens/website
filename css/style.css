@@ -16,8 +16,9 @@
         font-family: 'Ubuntu', sans-serif;
     }
 
-    body {
+    body, html {
         background-color: #F8F8F8;
+        overflow-x: hidden;
     }
 
     .philoText a,
